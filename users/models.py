@@ -6,8 +6,8 @@ from PIL import Image
 
 class Profile(models.Model):
     TEXT_C = [
-        ("Vim", "Vim"),
-        ("EMACS", "EMACS")
+        ("Find Sponser", "Find Sponser"),
+        ("Shall we talk?", "Shall we talk?")
     ]
     GENDER_C = [
         ("Male", "Male"),
@@ -20,8 +20,8 @@ class Profile(models.Model):
         ("Angel Investor", "Angel Investor")
     ]
     SPACES_C = [
-        ("Tabs", "Tabs"),
-        ("Spaces", "Spaces")
+        ("Cash", "Cash"),
+        ("Financial loans", "Financial loans")
     ]
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -35,11 +35,11 @@ class Profile(models.Model):
     tech_stack = models.CharField(max_length=500, null=True)
 
     editor = models.CharField(
-        max_length=5, choices=TEXT_C, default=None, null=True, blank=True)
+        max_length=50, choices=TEXT_C, default=None, null=True, blank=True)
     os = models.CharField(
-        max_length=10, choices=OS_C, default=None, null=True, blank=True)
+        max_length=50, choices=OS_C, default=None, null=True, blank=True)
     spacing = models.CharField(
-        max_length=10, choices=SPACES_C, default=None, null=True, blank=True)
+        max_length=50, choices=SPACES_C, default=None, null=True, blank=True)
 
     likeability = models.ManyToManyField(
         User, related_name="likes", blank=True)

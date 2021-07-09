@@ -47,7 +47,7 @@ def likePost(req, pk):
         user.likeability.add(req.user)
         if user.user in req.user.profile.likeability.all():
             messages.success(
-                req, f"Thats a match, {user.full_name} likes you back!")
+                req, f"Congratulations! {user.full_name} wanna talk to you!")
     return redirect("home-page")
 
 
