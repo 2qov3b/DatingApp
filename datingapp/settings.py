@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6b4s4m-c-z8-32z!n193vt(4o*x9y^cbypn^=_y6ru257=rrl@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["http://dreammatch-env.eba-wpqtgnwi.ap-northeast-1.elasticbeanstalk.com/"]
 
 
 # Application definition
@@ -78,10 +78,23 @@ WSGI_APPLICATION = 'datingapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# Local DB
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# AWS DB
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': os.environ['RDS_DB_NAME'],
+    'USER': os.environ['RDS_USERNAME'],
+    'PASSWORD': os.environ['RDS_PASSWORD'],
+    'HOST': os.environ['RDS_HOSTNAME'],
+    'PORT': os.environ['RDS_PORT'],
     }
 }
 
