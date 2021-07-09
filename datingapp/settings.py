@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
+    'users.apps.UsersConfig',
+    'crispy_forms',
+    'multiselectfield',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -101,6 +105,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+LOGIN_URL = "/login/"
+
+LOGIN_REDIRECT_URL = "profile-page"
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -124,3 +132,19 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+# MEDIA_URL = 'media/'
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_POST = 587
+EMAIL_USE_TLS = True
+#EMAIL_HOST_USER = config('MAIL')
+EMAIL_HOST_USER = 'golddanae@gmail.com'
+#EMAIL_HOST_PASSWORD = config('PASSWORD')
+EMAIL_HOST_PASSWORD = 'ilik3you@123'
