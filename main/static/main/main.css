@@ -55,7 +55,7 @@ a {
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.27);
 }
 .create-btn:hover {
-  background: #7550fd;
+  background: #17a8d4;
 }
 .navigation {
   z-index: 999;
@@ -178,11 +178,11 @@ a.login:hover {
 }
 .like-btn i {
   font-size: 1.5rem;
-  color: rgb(209, 107, 124);
+  color: rgb(38, 194, 168);
 }
 .block-btn i {
   font-size: 1.5rem;
-  color: rgba(187, 15, 44, 0.9);
+  color: rgba(25, 151, 99, 0.9);
 }
 
 .like-btn:hover,
@@ -210,7 +210,7 @@ a.login:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: rgb(241, 133, 133);
+  background: rgb(19, 192, 178);
 }
 .container-fluid .btn {
   margin: auto;
@@ -307,7 +307,7 @@ a.login:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: rgb(241, 133, 133);
+  background: rgb(20, 150, 150);
 }
 .container-delete h1 {
   margin-bottom: 20px;
