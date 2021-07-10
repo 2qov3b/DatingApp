@@ -30,8 +30,8 @@ SECRET_KEY = config("KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-#ALLOWED_HOSTS = ["http://dreammatch-env.eba-wpqtgnwi.ap-northeast-1.elasticbeanstalk.com/"]
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["dreammatch-env.eba-wpqtgnwi.ap-northeast-1.elasticbeanstalk.com"]
 
 
 # Application definition
